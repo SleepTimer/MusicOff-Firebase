@@ -8,39 +8,35 @@
       align-items: center;
     }
 
-    h5 {
-      color: white;
-      text-align: center;
+    #screenshot {
+      display: inline-block;
+    }
+
+    #logo-block {
+      display: inline-block;
     }
 
     #logo {
-      width: 256px;
-      height: 256px;
+      width: 42px;
+      height: 42px;
       margin: 0 auto;
       display: block;
     }
 
-    #screenshot-div {
-      display: inline-block;
-    }
-
-    #others-div {
-      display: inline-block;
+    #app-name {
+      font-size: 16px;
+      color: #BDBDBD;
+      font-family: roboto-regular;
     }
   </style>
 </head>
 
 <body>
-  <div>
-    <div id="screenshot-div">
-      <img id="screenshot" src="/assets/images/screenshot.png" />
-    </div>
-    <div id="others-div">
-      <img id="logo" src="/assets/icons/playstore-icon.png" />
-      <h5>Music Off</h5>
-    </div>
+  <img id="screenshot" src="/assets/images/screenshot.png" />
+  <div id="logo-block">
+    <img id="logo" src="/assets/icons/playstore-icon.png" />
+    <h5 id="app-name">Music Off</h5>
   </div>
-
 </body>
 
 </html>
