@@ -5,38 +5,42 @@
   <style>
     body {
       background-color: #141414;
-      align-items: center;
     }
 
     #screenshot {
       display: inline-block;
     }
 
-    #logo-block {
+    #logo-container {
       display: inline-block;
     }
 
+    #logo-block {
+      align-items: center;
+      display: flex;
+    }
+
     #logo {
-      width: 42px;
       height: 42px;
-      margin: 0 auto;
-      display: block;
+      width: 42px;
     }
 
     #app-name {
-      font-size: 16px;
       color: #BDBDBD;
-      font-family: roboto-regular;
+      font-family: roboto-light;
+      font-size: 16px;
     }
   </style>
 </head>
 
 <body>
   <img id="screenshot" src="/assets/images/screenshot.png" />
+  <div id="logo-container">
   <div id="logo-block">
     <img id="logo" src="/assets/icons/playstore-icon.png" />
-    <h5 id="app-name">Music Off</h5>
+    <span id="app-name">Music Off</span>
   </div>
+</div>
 </body>
 
 </html>
