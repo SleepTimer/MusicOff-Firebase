@@ -25,10 +25,26 @@
     }
 
     #screenshot {
+      float: right;
+      height: 445px;
       margin-top: 50px;
+      width: 499px;
+    }
+
+    @media (max-width: 991px) {
+      #screenshot {
+        float: none;
+      }
     }
 
     #logo-container {
+      margin-left: -60px;
+    }
+
+    @media (max-width: 991px) {
+      #logo-container {
+        margin-left: 0px;
+      }
     }
 
     #logo-block {
@@ -74,10 +90,10 @@
 
     #google-play {
       height: 63px;
+      margin-left: -10px;
       margin-right: 15px;
       width: 163px;
     }
-
   </style>
 </head>
 
@@ -87,7 +103,9 @@
     <span id="app-name">Music Off</span>
   </div>
   <div id="header" class="row">
-    <img id="screenshot" src="/assets/images/mockupbitmap@3x.png" class="col-md-6" />
+    <div class="col-md-6">
+      <img id="screenshot" src="/assets/images/mockupbitmap@3x.png" />
+    </div>
     <div id="logo-container" class="col-md-6">
       <span id="catch-phrase">Fall asleep to your favorite music</span>
       <span id="description">Play your favorite music, set the timer and just forget about it.<br>Music Off will take care of turning off the music.</span>
