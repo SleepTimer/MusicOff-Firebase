@@ -56,7 +56,10 @@
     #logo-block {
       align-items: center;
       display: flex;
-      margin: 21px 0 136px 30px;
+      /*margin: 21px 0 136px 30px;*/
+      position: fixed;
+      top: 20px;
+      left: 20px;
     }
 
     #logo {
@@ -135,11 +138,6 @@
   <img class="wavelayer" src="/assets/images/wavelayer1.png" />
   <img class="wavelayer" src="/assets/images/wavelayer2.png" />
   <img class="wavelayer" src="/assets/images/wavelayer3.png" />
-  <div class="wavelayer">
-    <div id="logo-block">
-      <img id="logo" src="/assets/icons/app-icon.png" />
-      <span id="app-name">Music Off</span>
-    </div>
     <div id="header" class="row">
       <div class="col-md-6">
         <!-- <img id="screenshot" src="/assets/images/mockupbitmap@3x.png" /> -->
@@ -152,7 +150,10 @@
         <span id="description">Play your favorite music, set the timer and just forget about it.<br>Music Off will take care of turning off the music.</span>
         <img id="google-play" src="/assets/icons/google-play.png" />
       </div>
-    </div>
+      <div id="logo-block">
+        <img id="logo" src="/assets/icons/app-icon.png" />
+        <span id="app-name">Music Off</span>
+      </div>
   </div>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
