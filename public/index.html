@@ -22,27 +22,38 @@
       background: -webkit-linear-gradient(180deg,
       #E14247 0px,
       #FFC800 120px,
-      #000000 120px,
+      #07226F 759px,
+      #E14247 1209px,
+      #FFC800 1527px,
+      #000000 1527px,
       #000000 100%);
       /* For Opera 11.1 to 12.0 */
       background: -o-linear-gradient(180deg,
       #E14247 0px,
       #FFC800 120px,
-      #000000 120px,
+      #07226F 759px,
+      #E14247 1209px,
+      #FFC800 1527px,
+      #000000 1527px,
       #000000 100%);
       /* For Firefox 3.6 to 15 */
       background: -moz-linear-gradient(180deg,
       #E14247 0px,
       #FFC800 120px,
-      #000000 120px,
+      #07226F 759px,
+      #E14247 1209px,
+      #FFC800 1527px,
+      #000000 1527px,
       #000000 100%);
       /* Standard syntax */
       background: linear-gradient(180deg,
       #E14247 0px,
       #FFC800 120px,
-      #000000 120px,
+      #07226F 759px,
+      #E14247 1209px,
+      #FFC800 1527px,
+      #000000 1527px,
       #000000 100%);
-      height: 100vh;
     }
 
     .wavelayer {
@@ -50,7 +61,16 @@
       left: 0;
       position: fixed;
       right: 0;
-      top: 0;
+      top: 25px;
+    }
+
+    #wavelayer-bottom {
+      background-color: #000000;
+      bottom: 0;
+      left: 0;
+      position: fixed;
+      right: 0;
+      top: 793px;
     }
 
     #logo-block {
@@ -75,9 +95,10 @@
       font-weight: 500;
     }
 
-    #header {
+    #contents {
       align-items: center;
       justify-content: center;
+      padding-top: 200px;
     }
 
     #screenshot {
@@ -138,22 +159,23 @@
   <img class="wavelayer" src="/assets/images/wavelayer1.png" />
   <img class="wavelayer" src="/assets/images/wavelayer2.png" />
   <img class="wavelayer" src="/assets/images/wavelayer3.png" />
-    <div id="header" class="row">
-      <div class="col-md-6">
-        <!-- <img id="screenshot" src="/assets/images/mockupbitmap@3x.png" /> -->
-        <video id="screenshot" autoplay="" loop="">
+  <div id="wavelayer-bottom"></div>
+  <div id="contents" class="row">
+    <div class="col-md-6">
+      <!-- <img id="screenshot" src="/assets/images/mockupbitmap@3x.png" /> -->
+      <video id="screenshot" autoplay="" loop="">
           <source src="/assets/images/test-render-21-may.mp4" type="video/mp4">
         </video>
-      </div>
-      <div id="logo-container" class="col-md-6">
-        <span id="catch-phrase">Fall asleep to your favorite music</span>
-        <span id="description">Play your favorite music, set the timer and just forget about it.<br>Music Off will take care of turning off the music.</span>
-        <img id="google-play" src="/assets/icons/google-play.png" />
-      </div>
-      <div id="logo-block">
-        <img id="logo" src="/assets/icons/app-icon.png" />
-        <span id="app-name">Music Off</span>
-      </div>
+    </div>
+    <div id="logo-container" class="col-md-6">
+      <span id="catch-phrase">Fall asleep to your favorite music</span>
+      <span id="description">Play your favorite music, set the timer and just forget about it.<br>Music Off will take care of turning off the music.</span>
+      <img id="google-play" src="/assets/icons/google-play.png" />
+    </div>
+  </div>
+  <div id="logo-block">
+    <img id="logo" src="/assets/icons/app-icon.png" />
+    <span id="app-name">Music Off</span>
   </div>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
