@@ -102,7 +102,6 @@
     }
 
     #screenshot {
-      float: right;
       height: 440px;
       margin-top: 50px;
       width: 500px;
@@ -152,6 +151,31 @@
       margin-right: 15px;
       width: 163px;
     }
+
+    .feature-title {
+      color: #ffffff;
+      display: block;
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: -0.22px;
+      width: 180px;
+    }
+
+    .feature-description {
+      color: #ffffff;
+      display: block;
+      font-family: 'Roboto', sans-serif;
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: -0.09px;
+      line-height: 19px;
+      width: 180px;
+    }
+
+    .right-col {
+      float: right;
+    }
   </style>
 </head>
 
@@ -160,18 +184,37 @@
   <img class="wavelayer" src="/assets/images/wavelayer2.png" />
   <img class="wavelayer" src="/assets/images/wavelayer3.png" />
   <div id="wavelayer-bottom"></div>
-  <div id="contents" class="row">
-    <div class="col-md-6">
-      <!-- <img id="screenshot" src="/assets/images/mockupbitmap@3x.png" /> -->
-      <video id="screenshot" autoplay="" loop="">
+  <div id="contents">
+    <div id="row-1" class="row">
+      <div class="col-md-6">
+        <!-- <img id="screenshot" src="/assets/images/mockupbitmap@3x.png" /> -->
+        <video id="screenshot" class="right-col" autoplay="" loop="">
           <source src="/assets/images/test-render-21-may.mp4" type="video/mp4">
         </video>
+      </div>
+      <div id="logo-container" class="col-md-6">
+        <span id="catch-phrase">Fall asleep to your favorite music</span>
+        <span id="description">Play your favorite music, set the timer and just forget about it.<br>Music Off will take care of turning off the music.</span>
+        <img id="google-play" src="/assets/icons/google-play.png" />
+      </div>
     </div>
-    <div id="logo-container" class="col-md-6">
-      <span id="catch-phrase">Fall asleep to your favorite music</span>
-      <span id="description">Play your favorite music, set the timer and just forget about it.<br>Music Off will take care of turning off the music.</span>
-      <img id="google-play" src="/assets/icons/google-play.png" />
+    <div id="row-2" class="row">
+      <div class="col-md-6">
+        <div class="right-col">
+          <span class="feature-title">Bed movement tracker</span>
+          <span class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut molestie eros sed velit ultricies porttitor.</span>
+          <span class="feature-title">Slowly lower the volume</span>
+          <span class="feature-description">Ut molestie eros sed velit ultricies porttitor.</span>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <span class="feature-title">Any apps to turn off</span>
+        <span class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut molestie eros sed velit ultricies porttitor.</span>
+        <span class="feature-title">Not even just apps</span>
+        <span class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut molestie eros sed velit ultricies porttitor.</span>
+      </div>
     </div>
+  </div>
   </div>
   <div id="logo-block">
     <img id="logo" src="/assets/icons/app-icon.png" />
