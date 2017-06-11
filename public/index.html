@@ -70,7 +70,7 @@
       left: 0;
       position: fixed;
       right: 0;
-      top: 793px;
+      top: 745px;
     }
 
     #logo-block {
@@ -228,7 +228,15 @@
     <img id="logo" src="/assets/icons/app-icon.png" />
     <span id="app-name">Music Off</span>
   </div>
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script>
+    $(window).scroll(function() {
+      const height = $(window).height();
+      const scrollTop = $(window).scrollTop();
+      $(".wavelayer").css("top", 25 + Math.min(scrollTop, height - 50) / 2);
+    });
+  </script>
 </body>
 
 </html>
