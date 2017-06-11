@@ -24,8 +24,8 @@
       #FFC800 120px,
       #07226F 759px,
       #E14247 1209px,
-      #FFC800 1527px,
-      #000000 1527px,
+      #FFC800 1536px,
+      #000000 1536px,
       #000000 100%);
       /* For Opera 11.1 to 12.0 */
       background: -o-linear-gradient(180deg,
@@ -33,8 +33,8 @@
       #FFC800 120px,
       #07226F 759px,
       #E14247 1209px,
-      #FFC800 1527px,
-      #000000 1527px,
+      #FFC800 1536px,
+      #000000 1536px,
       #000000 100%);
       /* For Firefox 3.6 to 15 */
       background: -moz-linear-gradient(180deg,
@@ -42,8 +42,8 @@
       #FFC800 120px,
       #07226F 759px,
       #E14247 1209px,
-      #FFC800 1527px,
-      #000000 1527px,
+      #FFC800 1536px,
+      #000000 1536px,
       #000000 100%);
       /* Standard syntax */
       background: linear-gradient(180deg,
@@ -51,8 +51,8 @@
       #FFC800 120px,
       #07226F 759px,
       #E14247 1209px,
-      #FFC800 1527px,
-      #000000 1527px,
+      #FFC800 1536px,
+      #000000 1536px,
       #000000 100%);
     }
 
@@ -232,9 +232,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script>
     $(window).scroll(function() {
-      const height = $(window).height();
-      const scrollTop = $(window).scrollTop();
-      $(".wavelayer").css("top", 25 + Math.min(scrollTop, height - 50) / 2);
+      const windowHeight = $(window).height();
+      const contentsHeight = $("#contents").height();
+      const windowScrollTop = $(window).scrollTop();
+      const waveScrollTop = windowScrollTop / (contentsHeight - windowHeight) * windowHeight;
+      $(".wavelayer").css("top", 25 + waveScrollTop);
+      $("#wavelayer-bottom").css("top", 745 + waveScrollTop);
     });
   </script>
 </body>
