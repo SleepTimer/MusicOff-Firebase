@@ -20,11 +20,20 @@
     }
 
     .wavelayer {
-      bottom: 0;
-      left: 0;
       position: fixed;
-      right: 0;
       top: 25px;
+    }
+
+    #wavelayer3 {
+      left: 0px;
+    }
+
+    #wavelayer2 {
+      right: 0px;
+    }
+
+    #wavelayer1 {
+      left: 0px;
     }
 
     #wavelayer-bottom {
@@ -189,9 +198,9 @@
 </head>
 
 <body>
-  <img class="wavelayer" src="/assets/images/wavelayer3.png" />
-  <img class="wavelayer" src="/assets/images/wavelayer2.png" />
-  <img class="wavelayer" src="/assets/images/wavelayer1.png" />
+  <img class="wavelayer" id="wavelayer3" src="/assets/images/wavelayer3.png" />
+  <img class="wavelayer" id="wavelayer2" src="/assets/images/wavelayer2.png" />
+  <img class="wavelayer" id="wavelayer1" src="/assets/images/wavelayer1.png" />
   <div id="wavelayer-bottom"></div>
   <div id="contents">
     <div id="row-1" class="row">
@@ -237,6 +246,9 @@
       const windowScrollTop = $(window).scrollTop();
       const waveScrollTop = windowScrollTop / (contentsHeight - windowHeight) * windowHeight;
       $(".wavelayer").css("top", 25 + waveScrollTop);
+      $("#wavelayer3").css("left", - waveScrollTop / 2);
+      $("#wavelayer2").css("right", - waveScrollTop);
+      $("#wavelayer1").css("left", - waveScrollTop / 3);
       $("#wavelayer-bottom").css("top", 745 + waveScrollTop);
     });
   </script>
