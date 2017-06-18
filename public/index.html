@@ -198,7 +198,7 @@
       <div class="col-md-6">
         <!-- <img id="screenshot" src="/assets/images/mockupbitmap@3x.png" /> -->
         <video id="screenshot" class="right-col" autoplay="" loop="">
-          <source src="/assets/images/test-render-21-may.mp4" type="video/mp4">
+          <source src="/assets/images/alphatest.mp4" type="video/mp4">
         </video>
       </div>
       <div id="logo-container" class="col-md-6">
@@ -229,7 +229,7 @@
     <span id="app-name">Music Off</span>
   </div>
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script>
     $(window).scroll(function() {
       const windowHeight = $(window).height();
@@ -239,6 +239,10 @@
       $(".wavelayer").css("top", 25 + waveScrollTop);
       $("#wavelayer-bottom").css("top", 745 + waveScrollTop);
     });
+  </script>
+  <script src="https://unpkg.com/seethru@3.0.1/dist/seeThru.min.js"></script>
+  <script>
+    seeThru.create('#screenshot');
   </script>
 </body>
 
