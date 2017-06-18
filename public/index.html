@@ -16,44 +16,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <style>
     body {
-      /* For browsers that do not support gradients */
       background: #000000;
-      /* For Safari 5.1 to 6.0 */
-      background: -webkit-linear-gradient(180deg,
-      #E14247 0px,
-      #FFC800 120px,
-      #07226F 759px,
-      #E14247 1209px,
-      #FFC800 1536px,
-      #000000 1536px,
-      #000000 100%);
-      /* For Opera 11.1 to 12.0 */
-      background: -o-linear-gradient(180deg,
-      #E14247 0px,
-      #FFC800 120px,
-      #07226F 759px,
-      #E14247 1209px,
-      #FFC800 1536px,
-      #000000 1536px,
-      #000000 100%);
-      /* For Firefox 3.6 to 15 */
-      background: -moz-linear-gradient(180deg,
-      #E14247 0px,
-      #FFC800 120px,
-      #07226F 759px,
-      #E14247 1209px,
-      #FFC800 1536px,
-      #000000 1536px,
-      #000000 100%);
-      /* Standard syntax */
-      background: linear-gradient(180deg,
-      #E14247 0px,
-      #FFC800 120px,
-      #07226F 759px,
-      #E14247 1209px,
-      #FFC800 1536px,
-      #000000 1536px,
-      #000000 100%);
     }
 
     .wavelayer {
@@ -97,13 +60,50 @@
 
     #contents {
       align-items: center;
+      /* For browsers that do not support gradients */
+      background: #000000;
+      /* For Safari 5.1 to 6.0 */
+      background: -webkit-linear-gradient(180deg,
+      #E14247 0px,
+      #FFC800 120px,
+      #07226F 759px,
+      #E14247 1209px,
+      #FFC800 1536px,
+      #000000 1536px,
+      #000000 100%);
+      /* For Opera 11.1 to 12.0 */
+      background: -o-linear-gradient(180deg,
+      #E14247 0px,
+      #FFC800 120px,
+      #07226F 759px,
+      #E14247 1209px,
+      #FFC800 1536px,
+      #000000 1536px,
+      #000000 100%);
+      /* For Firefox 3.6 to 15 */
+      background: -moz-linear-gradient(180deg,
+      #E14247 0px,
+      #FFC800 120px,
+      #07226F 759px,
+      #E14247 1209px,
+      #FFC800 1536px,
+      #000000 1536px,
+      #000000 100%);
+      /* Standard syntax */
+      background: linear-gradient(180deg,
+      #E14247 0px,
+      #FFC800 120px,
+      #07226F 759px,
+      #E14247 1209px,
+      #FFC800 1536px,
+      #000000 1536px,
+      #000000 100%);
       justify-content: center;
+      overflow-y: hidden;
     }
 
     #screenshot {
-      height: 440px;
-      margin-top: 50px;
-      width: 500px;
+      display: none;
     }
 
     @media (max-width: 991px) {
@@ -198,7 +198,7 @@
       <div class="col-md-6">
         <!-- <img id="screenshot" src="/assets/images/mockupbitmap@3x.png" /> -->
         <video id="screenshot" class="right-col" autoplay="" loop="">
-          <source src="/assets/images/alphatest.mp4" type="video/mp4">
+          <source src="/assets/images/alphatest500x880.mp4" type="video/mp4">
         </video>
       </div>
       <div id="logo-container" class="col-md-6">
