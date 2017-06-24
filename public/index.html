@@ -56,14 +56,14 @@
 
     #logo {
       height: 42px;
-      margin-right: 15px;
+      margin-right: 10px;
       width: 42px;
     }
 
     #app-name {
       color: #FFFFFF;
       font-family: 'Roboto', sans-serif;
-      font-size: 16px;
+      font-size: 12px;
       font-weight: 500;
     }
 
@@ -73,8 +73,8 @@
       background: #000000;
       /* For Safari 5.1 to 6.0 */
       background: -webkit-linear-gradient(180deg,
-      #E14247 0px,
-      #FFC800 120px,
+      #E24245 0px,
+      #E34840 120px,
       #07226F 759px,
       #E14247 1209px,
       #FFC800 1536px,
@@ -82,8 +82,8 @@
       #000000 100%);
       /* For Opera 11.1 to 12.0 */
       background: -o-linear-gradient(180deg,
-      #E14247 0px,
-      #FFC800 120px,
+      #E24245 0px,
+      #E34840 120px,
       #07226F 759px,
       #E14247 1209px,
       #FFC800 1536px,
@@ -91,8 +91,8 @@
       #000000 100%);
       /* For Firefox 3.6 to 15 */
       background: -moz-linear-gradient(180deg,
-      #E14247 0px,
-      #FFC800 120px,
+      #E24245 0px,
+      #E34840 120px,
       #07226F 759px,
       #E14247 1209px,
       #FFC800 1536px,
@@ -100,8 +100,8 @@
       #000000 100%);
       /* Standard syntax */
       background: linear-gradient(180deg,
-      #E14247 0px,
-      #FFC800 120px,
+      #E24245 0px,
+      #E34840 120px,
       #07226F 759px,
       #E14247 1209px,
       #FFC800 1536px,
@@ -154,10 +154,9 @@
     }
 
     #google-play {
-      height: 63px;
-      margin-left: -10px;
+      height: 40px;
       margin-right: 15px;
-      width: 163px;
+      width: 135px;
     }
 
     .feature-title {
@@ -172,13 +171,15 @@
     }
 
     .feature-description {
-      color: #9E9E9E;
+      color: #FFFFFF;
       display: block;
       font-family: 'Roboto', sans-serif;
       font-size: 12px;
       font-weight: 300;
       letter-spacing: -0.09px;
       line-height: 19px;
+      margin-bottom: 100px;
+      opacity: 0.65;
       width: 240px;
     }
 
@@ -219,15 +220,19 @@
     <div id="row-2" class="row">
       <div class="col-md-6">
         <div class="right-col">
+          <img src="/assets/images/feature1@1x.png" />
           <span class="feature-title">Bed movement tracker</span>
           <span class="feature-description">Music Off monitors your movements while asleep, and will turn the music off when only light movements are detected.</span>
+          <img src="/assets/images/feature3@1x.png" />
           <span class="feature-title">Slowly lower the volume</span>
           <span class="feature-description">Sensitive enough to be awoken by sudden changes in volume? No problem!</span>
         </div>
       </div>
       <div class="col-md-6">
+        <img src="/assets/images/feature2@1x.png" />
         <span class="feature-title">More than just music</span>
         <span class="feature-description">No matter which app you’re using, we can turn it off once you’re asleep.</span>
+        <img src="/assets/images/feature4@1x.png" />
         <span class="feature-title">Not just apps</span>
         <span class="feature-description">Turn off the screen, data, or wifi to save battery or data allowance. Or turn on airplane mode to turn off the outside world.</span>
       </div>
@@ -246,9 +251,9 @@
       const windowScrollTop = $(window).scrollTop();
       const waveScrollTop = windowScrollTop / (contentsHeight - windowHeight) * windowHeight;
       $(".wavelayer").css("top", 25 + waveScrollTop);
-      $("#wavelayer3").css("left", - waveScrollTop / 2);
-      $("#wavelayer2").css("right", - waveScrollTop);
-      $("#wavelayer1").css("left", - waveScrollTop / 3);
+      $("#wavelayer3").css("left", -waveScrollTop / 2);
+      $("#wavelayer2").css("right", -waveScrollTop);
+      $("#wavelayer1").css("left", -waveScrollTop / 3);
       $("#wavelayer-bottom").css("top", 745 + waveScrollTop);
     });
   </script>
