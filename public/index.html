@@ -12,11 +12,10 @@
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/playstore-icon.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/playstore-icon.png">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <style>
     body {
       background: #1C1C1C;
+      margin: 0;
     }
 
     .wavelayer {
@@ -86,15 +85,56 @@
     }
 
     .row {
+      display: flex;
       height: 768px;
+      width: 100%
     }
 
-    .col-md-6 {
-      padding: 0;
+    .col {
+      position: relative;
+      width: 50%;
     }
 
-    .right-align {
+    .col-center {
+      width: 100%;
+    }
+
+    .col-left {
       float: right;
+    }
+
+    .col-right {
+      float: left;
+    }
+
+    #row1-col-left {
+      margin-right: -89px;
+      padding-top: 164px;
+    }
+
+    #row1-col-right {
+      padding-top: 211px;
+      padding-left: 25px;
+    }
+
+    #row2-col-left {
+      padding-top: 164px;
+      padding-right: 60px;
+    }
+
+    #row2-col-right {
+      padding-top: 264px;
+      padding-left: 60px;
+    }
+
+    #row3-col-left {
+      margin-right: -21px;
+      padding-top: 226px;
+    }
+
+    #row3-col-right {
+      padding-top: 226px;
+      padding-left: 60px;
     }
 
     #screenshot {
@@ -128,36 +168,6 @@
       margin: auto;
       margin-top: 30px;
       width: 135px;
-    }
-
-    #row1-col-left {
-      margin-right: -89px;
-      padding-top: 164px;
-    }
-
-    #row1-col-right {
-      padding-top: 211px;
-      padding-left: 25px;
-    }
-
-    #row2-col-left {
-      padding-top: 164px;
-      padding-right: 60px;
-    }
-
-    #row2-col-right {
-      padding-top: 264px;
-      padding-left: 60px;
-    }
-
-    #row3-col-left {
-      margin-right: -21px;
-      padding-top: 226px;
-    }
-
-    #row3-col-right {
-      padding-top: 226px;
-      padding-left: 60px;
     }
 
     .feature-img {
@@ -195,6 +205,7 @@
       display: block;
       font: 24px/50px 'Roboto-Regular', sans-serif;
       letter-spacing: -0.68px;
+      padding-top: 293px;
       text-align: center;
     }
 
@@ -235,23 +246,25 @@
   <div id="wavelayer-bottom"></div>
   <div id="contents">
     <div class="row">
-      <div class="col-md-6">
-        <div id="row1-col-left" class="right-align">
+      <div class="col">
+        <div id="row1-col-left" class="col-left">
           <!-- <img id="screenshot" src="/assets/images/mockupbitmap@3x.png" /> -->
           <video id="screenshot" class="right-col" autoplay loop>
             <source src="/assets/images/alphatest500x880.mp4" type="video/mp4">
           </video>
         </div>
       </div>
-      <div id="row1-col-right" class="col-md-6">
-        <span id="catch-phrase">Play, set, forget.</span>
-        <span id="description">You know best what you are looking for in a bedtime track,<br>Music Off knows what to do for the rest.</span>
-        <img id="google-play" src="/assets/icons/google-play.png" />
+      <div class="col">
+        <div id="row1-col-right" class="col-right">
+          <span id="catch-phrase">Play, set, forget.</span>
+          <span id="description">You know best what you are looking for in a bedtime track,<br>Music Off knows what to do for the rest.</span>
+          <img id="google-play" src="/assets/icons/google-play.png" />
+        </div>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6">
-        <div id="row2-col-left" class="right-align">
+      <div class="col">
+        <div id="row2-col-left" class="col-left">
           <img class="feature-img" src="/assets/images/feature1@2x.png" />
           <span class="feature-title">Bed movement tracker</span>
           <span class="feature-description">Music Off monitors your movements while asleep, and will turn the music off when only light movements are detected.</span>
@@ -260,31 +273,37 @@
           <span class="feature-description">Sensitive enough to be awoken by sudden changes in volume? No problem!</span>
         </div>
       </div>
-      <div id="row2-col-right" class="col-md-6">
-        <img class="feature-img" src="/assets/images/feature2@2x.png" />
-        <span class="feature-title">More than just music</span>
-        <span class="feature-description">No matter which app you’re using, we can turn it off once you’re asleep.</span>
-        <img class="feature-img" src="/assets/images/feature4@2x.png" />
-        <span class="feature-title">Not just apps</span>
-        <span class="feature-description">Turn off the screen, data, or wifi to save battery or data allowance. Or turn on airplane mode to turn off the outside world.</span>
+      <div class="col">
+        <div id="row2-col-right" class="col-right">
+          <img class="feature-img" src="/assets/images/feature2@2x.png" />
+          <span class="feature-title">More than just music</span>
+          <span class="feature-description">No matter which app you’re using, we can turn it off once you’re asleep.</span>
+          <img class="feature-img" src="/assets/images/feature4@2x.png" />
+          <span class="feature-title">Not just apps</span>
+          <span class="feature-description">Turn off the screen, data, or wifi to save battery or data allowance. Or turn on airplane mode to turn off the outside world.</span>
+        </div>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6">
-        <div id="row3-col-left" class="right-align">
+      <div class="col">
+        <div id="row3-col-left" class="col-left">
           <img class="widget-img" src="/assets/images/widget1@2x.png" />
         </div>
       </div>
-      <div id="row3-col-right" class="col-md-6">
-        <img class="feature-img" src="/assets/images/feature5@2x.png" />
-        <span class="feature-title">Choose your favourite widget</span>
-        <span class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus molestie eros id congue molestie. In eget tempor est. Integer viverra pretium finibus.</span>
+      <div class="col">
+        <div id="row3-col-right" class="col-right">
+          <img class="feature-img" src="/assets/images/feature5@2x.png" />
+          <span class="feature-title">Choose your favourite widget</span>
+          <span class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus molestie eros id congue molestie. In eget tempor est. Integer viverra pretium finibus.</span>
+        </div>
       </div>
     </div>
     <div class="row">
-      <span id="closing-title">Shhh… It’s time for bed.</span>
-      <span id="closing-description">Why don’t you just give it a try?</span>
-      <img id="google-play-big" src="/assets/icons/google-play.png" />
+      <div class="col-center">
+        <span id="closing-title">Shhh… It’s time for bed.</span>
+        <span id="closing-description">Why don’t you just give it a try?</span>
+        <img id="google-play-big" src="/assets/icons/google-play.png" />
+      </div>
     </div>
   </div>
   <div id="logo-block">
@@ -292,7 +311,6 @@
     <span id="app-name">Music Off</span>
   </div>
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script>
     $(window).scroll(function() {
       const windowHeight = $(window).height();
