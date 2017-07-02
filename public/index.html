@@ -89,6 +89,10 @@
       height: 768px;
     }
 
+    .col-md-6 {
+      padding: 0;
+    }
+
     .right-align {
       float: right;
     }
@@ -97,29 +101,12 @@
       display: none;
     }
 
-    @media (max-width: 991px) {
-      #screenshot {
-        float: none;
-      }
-    }
-
-    #description-block {
-      margin-left: -60px;
-    }
-
-    @media (max-width: 991px) {
-      #description-block {
-        margin-left: 0px;
-      }
-    }
-
     #catch-phrase {
       color: #ffffff;
       display: block;
       font: 24px/50px 'Roboto-Regular', sans-serif;
       letter-spacing: -0.68px;
       margin-bottom: 3px;
-      margin-top: 211px;
     }
 
     #description {
@@ -143,13 +130,33 @@
       width: 135px;
     }
 
-    .feature-col-left {
+    #row1-col-left {
+      margin-right: -89px;
+      padding-top: 164px;
+    }
+
+    #row1-col-right {
+      padding-top: 211px;
+      padding-left: 25px;
+    }
+
+    #row2-col-left {
       padding-top: 164px;
       padding-right: 60px;
     }
 
-    .feature-col-right {
+    #row2-col-right {
       padding-top: 264px;
+      padding-left: 60px;
+    }
+
+    #row3-col-left {
+      margin-right: -21px;
+      padding-top: 226px;
+    }
+
+    #row3-col-right {
+      padding-top: 226px;
       padding-left: 60px;
     }
 
@@ -180,8 +187,6 @@
 
     .widget-img {
       height: 48px;
-      margin-right: -81px;
-      margin-top: 100px;
       width: 320px;
     }
 
@@ -231,20 +236,22 @@
   <div id="contents">
     <div class="row">
       <div class="col-md-6">
-        <!-- <img id="screenshot" src="/assets/images/mockupbitmap@3x.png" /> -->
-        <video id="screenshot" class="right-col" autoplay loop>
-          <source src="/assets/images/alphatest500x880.mp4" type="video/mp4">
-        </video>
+        <div id="row1-col-left" class="right-align">
+          <!-- <img id="screenshot" src="/assets/images/mockupbitmap@3x.png" /> -->
+          <video id="screenshot" class="right-col" autoplay loop>
+            <source src="/assets/images/alphatest500x880.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
-      <div id="description-block" class="col-md-6">
+      <div id="row1-col-right" class="col-md-6">
         <span id="catch-phrase">Play, set, forget.</span>
         <span id="description">You know best what you are looking for in a bedtime track,<br>Music Off knows what to do for the rest.</span>
         <img id="google-play" src="/assets/icons/google-play.png" />
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6 feature-col-left">
-        <div class="right-align">
+      <div class="col-md-6">
+        <div id="row2-col-left" class="right-align">
           <img class="feature-img" src="/assets/images/feature1@2x.png" />
           <span class="feature-title">Bed movement tracker</span>
           <span class="feature-description">Music Off monitors your movements while asleep, and will turn the music off when only light movements are detected.</span>
@@ -253,7 +260,7 @@
           <span class="feature-description">Sensitive enough to be awoken by sudden changes in volume? No problem!</span>
         </div>
       </div>
-      <div class="col-md-6 feature-col-right">
+      <div id="row2-col-right" class="col-md-6">
         <img class="feature-img" src="/assets/images/feature2@2x.png" />
         <span class="feature-title">More than just music</span>
         <span class="feature-description">No matter which app you’re using, we can turn it off once you’re asleep.</span>
@@ -263,12 +270,12 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6 feature-col-left">
-        <div class="right-align">
+      <div class="col-md-6">
+        <div id="row3-col-left" class="right-align">
           <img class="widget-img" src="/assets/images/widget1@2x.png" />
         </div>
       </div>
-      <div class="col-md-6 feature-col-right">
+      <div id="row3-col-right" class="col-md-6">
         <img class="feature-img" src="/assets/images/feature5@2x.png" />
         <span class="feature-title">Choose your favourite widget</span>
         <span class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus molestie eros id congue molestie. In eget tempor est. Integer viverra pretium finibus.</span>
