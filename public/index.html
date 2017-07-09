@@ -159,6 +159,10 @@
       display: none;
     }
 
+    #screenshot-mobile {
+      display: none;
+    }
+
     #catch-phrase {
       color: #ffffff;
       display: block;
@@ -172,6 +176,7 @@
       display: block;
       font: 16px/24px 'Roboto-Thin', sans-serif;
       margin-bottom: 30px;
+      max-width: 362px;
     }
 
     #google-play {
@@ -262,7 +267,7 @@
       }
 
       #row1 {
-        height: 649px;
+        height: 750px;
       }
 
       #row2 {
@@ -275,6 +280,14 @@
 
       #row4 {
         height: 621px;
+      }
+
+      .col-left {
+        float: initial;
+      }
+
+      .col-right {
+        float: initial;
       }
 
       #row1-col-left {
@@ -293,17 +306,45 @@
 
       .row2-col-mobile {
         display: block;
-        margin: 0 auto;
+        margin: 0 40px;
+        max-width: 400px;
         width: initial;
       }
 
+      .seeThru-display {
+        display: none;
+      }
+
+      #screenshot-mobile {
+        display: block;
+        margin: auto;
+        width: 375px;
+      }
+
+      #catch-phrase {
+        margin: 0 40px;
+      }
+
       #description {
-        margin-bottom: 20px;
-        width: 240px;
+        margin: 0 40px 20px 40px;
+      }
+
+      #google-play {
+        height: 40px;
+        margin: 0 40px;
+        width: 135px;
+      }
+
+      .feature-title {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        width: auto;
       }
 
       .feature-description {
+        margin-top: 0px;
         margin-bottom: 20px;
+        width: auto;
       }
 
       #closing-title {
@@ -322,7 +363,7 @@
     <div id="row1" class="row">
       <div class="col">
         <div id="row1-col-left" class="col-left">
-          <!-- <img id="screenshot" src="/assets/images/mockupbitmap@3x.png" /> -->
+          <img id="screenshot-mobile" src="/assets/images/mockupbitmap@3x.png" />
           <video id="screenshot" class="right-col" autoplay loop>
             <source src="/assets/images/alphatest500x880.mp4" type="video/mp4">
           </video>
@@ -331,7 +372,7 @@
       <div class="col">
         <div id="row1-col-right" class="col-right">
           <span id="catch-phrase">Play, set, forget.</span>
-          <span id="description">You know best what you are looking for in a bedtime track,<br>Music Off knows what to do for the rest.</span>
+          <span id="description">You know best what you are looking for in a bedtime track, Music Off knows what to do for the rest.</span>
           <img id="google-play" src="/assets/icons/google-play.png" />
         </div>
       </div>
