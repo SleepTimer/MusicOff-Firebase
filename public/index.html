@@ -13,7 +13,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/playstore-icon.png">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
   <style>
-  body {
+    body {
       background: #1C1C1C;
       margin: 0;
     }
@@ -253,11 +253,36 @@
     }
 
     @media screen and (max-width: 600px) {
+      .row {
+        flex-direction: column;
+      }
+
+      #row1 {
+        height: 649px;
+      }
+
+      #row2 {
+        height: 833px;
+      }
+
+      #row3 {
+        display: none;
+      }
+
+      #row4 {
+        height: 621px;
+      }
+
       .row2-col-desktop {
         display: none;
       }
       .row2-col-mobile {
         display: block;
+        margin: 0 auto;
+      }
+
+      .feature-description {
+        margin-bottom: 20px;
       }
     }
   </style>
@@ -311,15 +336,18 @@
         <img class="feature-img" src="/assets/images/feature1@2x.png" />
         <span class="feature-title">Bed movement tracker</span>
         <span class="feature-description">Music Off monitors your movements while asleep, and will turn the music off when only light movements are detected.</span>
-        <img class="feature-img" src="/assets/images/feature3@2x.png" />
-        <span class="feature-title">Slowly lower the volume</span>
-        <span class="feature-description">Sensitive enough to be awoken by sudden changes in volume? No problem!</span>
         <img class="feature-img" src="/assets/images/feature2@2x.png" />
         <span class="feature-title">More than just music</span>
         <span class="feature-description">No matter which app you’re using, we can turn it off once you’re asleep.</span>
+        <img class="feature-img" src="/assets/images/feature3@2x.png" />
+        <span class="feature-title">Slowly lower the volume</span>
+        <span class="feature-description">Sensitive enough to be awoken by sudden changes in volume? No problem!</span>
         <img class="feature-img" src="/assets/images/feature4@2x.png" />
         <span class="feature-title">Not just apps</span>
         <span class="feature-description">Turn off the screen, data, or wifi to save battery or data allowance. Or turn on airplane mode to turn off the outside world.</span>
+        <img class="feature-img" src="/assets/images/feature5@2x.png" />
+        <span class="feature-title">Choose your favourite widget</span>
+        <span class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus molestie eros id congue molestie. In eget tempor est. Integer viverra pretium finibus.</span>
       </div>
     </div>
     <div id="row3" class="row">
