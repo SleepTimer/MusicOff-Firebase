@@ -13,7 +13,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/playstore-icon.png">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
   <style>
-    body {
+  body {
       background: #1C1C1C;
       margin: 0;
     }
@@ -141,7 +141,7 @@
       padding-left: 60px;
     }
 
-    #row2-col-mobile {
+    .row2-col-mobile {
       display: none;
     }
 
@@ -251,6 +251,15 @@
       color: #FFFFFF;
       font: 12px 'Roboto-Regular', sans-serif;
     }
+
+    @media screen and (max-width: 600px) {
+      .row2-col-desktop {
+        display: none;
+      }
+      .row2-col-mobile {
+        display: block;
+      }
+    }
   </style>
 </head>
 
@@ -278,7 +287,7 @@
       </div>
     </div>
     <div id="row2" class="row">
-      <div class="col">
+      <div class="col row2-col-desktop">
         <div id="row2-col-left" class="col-left">
           <img class="feature-img" src="/assets/images/feature1@2x.png" />
           <span class="feature-title">Bed movement tracker</span>
@@ -288,7 +297,7 @@
           <span class="feature-description">Sensitive enough to be awoken by sudden changes in volume? No problem!</span>
         </div>
       </div>
-      <div class="col">
+      <div class="col row2-col-desktop">
         <div id="row2-col-right" class="col-right">
           <img class="feature-img" src="/assets/images/feature2@2x.png" />
           <span class="feature-title">More than just music</span>
@@ -298,7 +307,7 @@
           <span class="feature-description">Turn off the screen, data, or wifi to save battery or data allowance. Or turn on airplane mode to turn off the outside world.</span>
         </div>
       </div>
-      <div id="row2-col-mobile" class="col">
+      <div class="col row2-col-mobile">
         <img class="feature-img" src="/assets/images/feature1@2x.png" />
         <span class="feature-title">Bed movement tracker</span>
         <span class="feature-description">Music Off monitors your movements while asleep, and will turn the music off when only light movements are detected.</span>
