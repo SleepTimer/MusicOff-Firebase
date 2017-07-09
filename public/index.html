@@ -51,34 +51,34 @@
       /* For Safari 5.1 to 6.0 */
       background: -webkit-linear-gradient(180deg,
       #E24245 0px,
-      #E53E64 896px,
-      #FFB700 1536px,
-      #9B3636 2061px,
-      #1C1C1C 2601px,
+      #E53E64 508px,
+      #FFB700 946px,
+      #9B3636 1324px,
+      #1C1C1C 1750px,
       #1C1C1C 100%);
       /* For Opera 11.1 to 12.0 */
       background: -o-linear-gradient(180deg,
       #E24245 0px,
-      #E53E64 896px,
-      #FFB700 1536px,
-      #9B3636 2061px,
-      #1C1C1C 2601px,
+      #E53E64 508px,
+      #FFB700 946px,
+      #9B3636 1324px,
+      #1C1C1C 1750px,
       #1C1C1C 100%);
       /* For Firefox 3.6 to 15 */
       background: -moz-linear-gradient(180deg,
       #E24245 0px,
-      #E53E64 896px,
-      #FFB700 1536px,
-      #9B3636 2061px,
-      #1C1C1C 2601px,
+      #E53E64 508px,
+      #FFB700 946px,
+      #9B3636 1324px,
+      #1C1C1C 1750px,
       #1C1C1C 100%);
       /* Standard syntax */
       background: linear-gradient(180deg,
       #E24245 0px,
-      #E53E64 896px,
-      #FFB700 1536px,
-      #9B3636 2061px,
-      #1C1C1C 2601px,
+      #E53E64 508px,
+      #FFB700 946px,
+      #9B3636 1324px,
+      #1C1C1C 1750px,
       #1C1C1C 100%);
       justify-content: center;
       overflow-y: hidden;
@@ -86,8 +86,23 @@
 
     .row {
       display: flex;
-      height: 768px;
       width: 100%
+    }
+
+    #row1 {
+      height: 768px;
+    }
+
+    #row2 {
+      height: 480px;
+    }
+
+    #row3 {
+      height: 480px;
+    }
+
+    #row4 {
+      height: 564px;
     }
 
     .col {
@@ -118,22 +133,21 @@
     }
 
     #row2-col-left {
-      padding-top: 164px;
       padding-right: 60px;
     }
 
     #row2-col-right {
-      padding-top: 264px;
+      padding-top: 107px;
       padding-left: 60px;
     }
 
     #row3-col-left {
       margin-right: -21px;
-      padding-top: 226px;
+      padding-top: 160px;
     }
 
     #row3-col-right {
-      padding-top: 226px;
+      padding-top: 160px;
       padding-left: 60px;
     }
 
@@ -152,8 +166,7 @@
     #description {
       color: #ffffff;
       display: block;
-      font: 14px/24px 'Roboto-Thin', sans-serif;
-      letter-spacing: -0.13px;
+      font: 16px/24px 'Roboto-Thin', sans-serif;
       margin-bottom: 30px;
     }
 
@@ -171,25 +184,24 @@
     }
 
     .feature-img {
-      height: 42px;
-      width: 54px;
+      height: 48px;
+      width: 72px;
     }
 
     .feature-title {
       color: #ffffff;
       display: block;
-      font: 14px/16px 'Roboto-Regular', sans-serif;
-      letter-spacing: -0.58px;
+      font: 16px/19px 'Roboto-Regular', sans-serif;
+      letter-spacing: -0.5px;
       margin-bottom: 5px;
       margin-top: 10px;
-      width: 180px;
+      width: 240px;
     }
 
     .feature-description {
       color: #FFFFFF;
       display: block;
-      font: 12px/19px 'Roboto-Thin', sans-serif;
-      letter-spacing: -0.09px;
+      font: 14px/20px 'Roboto-Thin', sans-serif;
       margin-bottom: 100px;
       opacity: 0.65;
       width: 240px;
@@ -205,15 +217,14 @@
       display: block;
       font: 24px/50px 'Roboto-Regular', sans-serif;
       letter-spacing: -0.68px;
-      padding-top: 293px;
+      padding-top: 136px;
       text-align: center;
     }
 
     #closing-description {
       color: #ffffff;
       display: block;
-      font: 14px/24px 'Roboto-Thin', sans-serif;
-      letter-spacing: -0.13px;
+      font: 16px/24px 'Roboto-Thin', sans-serif;
       margin-bottom: 30px;
       text-align: center;
     }
@@ -245,7 +256,7 @@
   <img class="wavelayer" id="wavelayer1" src="/assets/images/wavelayer1.png" />
   <div id="wavelayer-bottom"></div>
   <div id="contents">
-    <div class="row">
+    <div id="row1" class="row">
       <div class="col">
         <div id="row1-col-left" class="col-left">
           <!-- <img id="screenshot" src="/assets/images/mockupbitmap@3x.png" /> -->
@@ -262,7 +273,7 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div id="row2" class="row">
       <div class="col">
         <div id="row2-col-left" class="col-left">
           <img class="feature-img" src="/assets/images/feature1@2x.png" />
@@ -284,7 +295,7 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div id="row3" class="row">
       <div class="col">
         <div id="row3-col-left" class="col-left">
           <img class="widget-img" src="/assets/images/widget1@2x.png" />
@@ -298,7 +309,7 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div id="row4" class="row">
       <div class="col-center">
         <span id="closing-title">Shhh… It’s time for bed.</span>
         <span id="closing-description">Why don’t you just give it a try?</span>
