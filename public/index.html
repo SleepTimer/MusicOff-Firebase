@@ -253,6 +253,10 @@
     }
 
     @media screen and (max-width: 600px) {
+      .col {
+        width: 100%;
+      }
+
       .row {
         flex-direction: column;
       }
@@ -273,16 +277,37 @@
         height: 621px;
       }
 
+      #row1-col-left {
+        margin-right: 0px;
+        padding-top: 100px;
+      }
+
+      #row1-col-right {
+        padding-top: 0px;
+        padding-left: 0px;
+      }
+
       .row2-col-desktop {
         display: none;
       }
+
       .row2-col-mobile {
         display: block;
         margin: 0 auto;
+        width: initial;
+      }
+
+      #description {
+        margin-bottom: 20px;
+        width: 240px;
       }
 
       .feature-description {
         margin-bottom: 20px;
+      }
+
+      #closing-title {
+        padding-top: 229px;
       }
     }
   </style>
