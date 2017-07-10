@@ -54,7 +54,7 @@
       #E53E64 508px,
       #FFB700 946px,
       #9B3636 1324px,
-      #1C1C1C 1750px,
+      #1C1C1C 1600px,
       #1C1C1C 100%);
       /* For Opera 11.1 to 12.0 */
       background: -o-linear-gradient(180deg,
@@ -62,7 +62,7 @@
       #E53E64 508px,
       #FFB700 946px,
       #9B3636 1324px,
-      #1C1C1C 1750px,
+      #1C1C1C 1600px,
       #1C1C1C 100%);
       /* For Firefox 3.6 to 15 */
       background: -moz-linear-gradient(180deg,
@@ -70,7 +70,7 @@
       #E53E64 508px,
       #FFB700 946px,
       #9B3636 1324px,
-      #1C1C1C 1750px,
+      #1C1C1C 1600px,
       #1C1C1C 100%);
       /* Standard syntax */
       background: linear-gradient(180deg,
@@ -78,7 +78,7 @@
       #E53E64 508px,
       #FFB700 946px,
       #9B3636 1324px,
-      #1C1C1C 1750px,
+      #1C1C1C 1600px,
       #1C1C1C 100%);
       justify-content: center;
       overflow-y: hidden;
@@ -166,15 +166,15 @@
     #catch-phrase {
       color: #ffffff;
       display: block;
-      font: 24px/50px 'Roboto-Regular', sans-serif;
-      letter-spacing: -0.68px;
+      font: 24px/50px 'Roboto-Light', sans-serif;
+      /*letter-spacing: -0.68px;*/
       margin-bottom: 3px;
     }
 
     #description {
       color: #ffffff;
       display: block;
-      font: 16px/24px 'Roboto-Thin', sans-serif;
+      font: 16px/24px 'Roboto-Light', sans-serif;
       margin-bottom: 30px;
       max-width: 362px;
     }
@@ -200,8 +200,8 @@
     .feature-title {
       color: #ffffff;
       display: block;
-      font: 16px/19px 'Roboto-Regular', sans-serif;
-      letter-spacing: -0.5px;
+      font: 18px/24px 'Roboto-Light', sans-serif;
+      /*letter-spacing: -0.5px;*/
       margin-bottom: 5px;
       margin-top: 10px;
       width: 240px;
@@ -210,7 +210,7 @@
     .feature-description {
       color: #FFFFFF;
       display: block;
-      font: 14px/20px 'Roboto-Thin', sans-serif;
+      font: 16px/24px 'Roboto-Light', sans-serif;
       margin-bottom: 100px;
       opacity: 0.65;
       width: 240px;
@@ -224,8 +224,8 @@
     #closing-title {
       color: #ffffff;
       display: block;
-      font: 24px/50px 'Roboto-Regular', sans-serif;
-      letter-spacing: -0.68px;
+      font: 24px/50px 'Roboto-Light', sans-serif;
+      /*letter-spacing: -0.68px;*/
       padding-top: 136px;
       text-align: center;
     }
@@ -233,7 +233,7 @@
     #closing-description {
       color: #ffffff;
       display: block;
-      font: 16px/24px 'Roboto-Thin', sans-serif;
+      font: 16px/24px 'Roboto-Light', sans-serif;
       margin-bottom: 30px;
       text-align: center;
     }
@@ -257,6 +257,7 @@
       font: 12px 'Roboto-Regular', sans-serif;
     }
 
+
     @media screen and (max-width: 600px) {
       .col {
         width: 100%;
@@ -271,7 +272,7 @@
       }
 
       #row2 {
-        height: 833px;
+        height: 1100px;
       }
 
       #row3 {
@@ -279,7 +280,7 @@
       }
 
       #row4 {
-        height: 621px;
+        height: 750px;
       }
 
       .col-left {
@@ -292,7 +293,7 @@
 
       #row1-col-left {
         margin-right: 0px;
-        padding-top: 100px;
+        padding-top: 48px;
       }
 
       #row1-col-right {
@@ -306,9 +307,8 @@
 
       .row2-col-mobile {
         display: block;
-        margin: 0 40px;
-        max-width: 400px;
-        width: initial;
+        margin: 50px 40px 0 40px;
+        width: auto;
       }
 
       .seeThru-display {
@@ -323,32 +323,45 @@
 
       #catch-phrase {
         margin: 0 40px;
+        text-align: center;
       }
 
       #description {
         margin: 0 40px 20px 40px;
+        text-align: center;
+        max-width: initial;
       }
 
       #google-play {
+        display: block;
         height: 40px;
-        margin: 0 40px;
+        margin: auto;
         width: 135px;
+      }
+
+      .feature-img {
+        display: block;
+        height: 48px;
+        margin: auto;
+        width: 72px;
       }
 
       .feature-title {
         margin-top: 10px;
         margin-bottom: 5px;
+        text-align: center;
         width: auto;
       }
 
       .feature-description {
         margin-top: 0px;
-        margin-bottom: 20px;
+        margin-bottom: 60px;
+        text-align: center;
         width: auto;
       }
 
       #closing-title {
-        padding-top: 229px;
+        padding-top: 300px;
       }
     }
   </style>
