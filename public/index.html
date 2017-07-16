@@ -19,7 +19,7 @@
     }
 
     body {
-      background: #1C1C1C;
+      background: #E24245;
       margin: 0;
     }
 
@@ -322,6 +322,7 @@
 
       #screenshot-mobile {
         display: block;
+        height: 375px;
         margin: auto;
         width: 375px;
       }
@@ -462,10 +463,10 @@
   </div>
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
   <script>
-    $(window).scroll(function() {
+    function updateViews() {
       const windowHeight = $(window).height();
       const contentsHeight = $("#contents").height();
-      const windowScrollTop = $(window).scrollTop();
+      const windowScrollTop = Math.max($(window).scrollTop(), 0);
       const waveScrollTop = windowScrollTop / (contentsHeight - windowHeight) * windowHeight;
       $(".wavelayer").css("top", 25 + waveScrollTop);
       $("#wavelayer-bottom").css("top", 745 + waveScrollTop);
@@ -495,6 +496,14 @@
       } else {
         $("#wavelayer3").css("left", -(waveScrollTop % (diff3 * 2)));
       }
+    }
+    $('window').on({
+      'touchmove': function(e) {
+        updateViews();
+      }
+    });
+    $(window).scroll(function() {
+      updateViews();
     });
   </script>
   <script src="https://unpkg.com/seethru@3.0.1/dist/seeThru.min.js"></script>
