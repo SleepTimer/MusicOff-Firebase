@@ -262,6 +262,56 @@
       font: 12px 'Roboto-Regular', sans-serif;
     }
 
+    @media (max-width: 800px) and (orientation: portrait) {
+      .col1 {
+        width: 100%;
+      }
+
+      #row1 {
+        flex-direction: column;
+        height: 750px;
+      }
+
+      #row1-col-left {
+        float: initial;
+        margin-right: 0px;
+        padding-top: 48px;
+      }
+
+      #row1-col-right {
+        padding-top: 0px;
+        padding-left: 0px;
+      }
+
+      .seeThru-display {
+        display: none;
+      }
+
+      #screenshot-mobile {
+        display: block;
+        height: 375px;
+        margin: auto;
+        width: 375px;
+      }
+
+      #catch-phrase {
+        margin: 0 40px;
+        text-align: center;
+      }
+
+      #description {
+        margin: 0 40px 20px 40px;
+        text-align: center;
+        max-width: initial;
+      }
+
+      #google-play {
+        display: block;
+        height: 40px;
+        margin: auto;
+        width: 135px;
+      }
+    }
 
     @media (max-width: 600px) and (orientation: portrait) {
       .col {
@@ -380,7 +430,7 @@
   <div id="wavelayer-bottom"></div>
   <div id="contents">
     <div id="row1" class="row">
-      <div class="col">
+      <div class="col col1">
         <div id="row1-col-left" class="col-left">
           <img id="screenshot-mobile" src="/assets/images/mockupbitmap@3x.png" />
           <video id="screenshot" class="right-col" autoplay loop>
@@ -388,7 +438,7 @@
           </video>
         </div>
       </div>
-      <div class="col">
+      <div class="col col1">
         <div id="row1-col-right" class="col-right">
           <span id="catch-phrase">Play, set, forget.</span>
           <span id="description">You know best what you are looking for in a bedtime track, Music Off knows what to do for the rest.</span>
