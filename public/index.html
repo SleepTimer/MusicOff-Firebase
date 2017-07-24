@@ -16,7 +16,7 @@
   <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-icon-144x144.png">
   <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
@@ -31,7 +31,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/playstore-icon.png">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
   <style>
-    html {
+      html {
       -webkit-text-size-adjust: 100%;
     }
 
@@ -267,6 +267,7 @@
     #logo-block {
       align-items: center;
       display: flex;
+      justify-content: center;
       position: fixed;
       top: 20px;
       left: 20px;
@@ -283,14 +284,30 @@
       font: 14px 'Roboto-Regular', sans-serif;
     }
 
+    #google-play-container {
+      display: none;
+    }
+
+    #google-play-bottom {
+      display: none;
+    }
+
     @media (max-width: 800px) {
       .col1 {
         width: 100%;
       }
 
+      .col-right {
+        float: none;
+      }
+
       #row1 {
         flex-direction: column;
         height: 750px;
+      }
+
+      #row4 {
+        height: 440px;
       }
 
       #row1-col-left {
@@ -329,6 +346,7 @@
         display: block;
         height: 375px;
         margin: auto;
+        padding-top: 40px;
         width: 375px;
       }
 
@@ -338,40 +356,59 @@
       }
 
       #description {
-        margin: 0 40px 20px 40px;
+        margin: auto;
+        margin-bottom: 20px;
         text-align: center;
-        max-width: initial;
+        max-width: 452px;
       }
 
       #google-play {
-        display: block;
-        height: 40px;
+        display: none;
+        /*height: 40px;
         margin: auto;
-        width: 135px;
+        width: 135px;*/
+      }
+
+      #google-play-big {
+        display: none;
       }
 
       .widget-img {
         height: 36px;
         width: 240px;
       }
+
+      #logo-block {
+        left: 50%;
+        top: 40px;
+        transform: translate(-50%, -50%);
+      }
+
+      #google-play-container {
+        background-color: #FFB700;
+        bottom: 0px;
+        display: initial;
+        height: 48px;
+        position: fixed;
+        width: 100%;
+      }
+
+      #google-play-bottom {
+        display: block;
+        font: 16px/24px 'Roboto-Regular', sans-serif;
+        color: white;
+        text-align: center;
+        padding: 12px 0;
+      }
     }
 
-    @media (min-width: 321px) and (max-width: 600px) {
+    @media (max-width: 600px) {
       .col {
         width: 100%;
       }
 
       .row {
         flex-direction: column;
-      }
-
-      #logo-block {
-        align-items: center;
-        display: flex;
-      }
-
-      .logo-block-mobile {
-        left: 50%;
       }
 
       #row1 {
@@ -387,7 +424,7 @@
       }
 
       #row4 {
-        height: 750px;
+        height: 700px;
       }
 
       .col-left {
@@ -422,13 +459,6 @@
         display: none;
       }
 
-      #screenshot-mobile {
-        display: block;
-        height: 375px;
-        margin: auto;
-        width: 375px;
-      }
-
       #catch-phrase {
         margin: 0 40px;
         text-align: center;
@@ -441,10 +471,10 @@
       }
 
       #google-play {
-        display: block;
-        height: 40px;
+        display: none;
+        /*height: 40px;
         margin: auto;
-        width: 135px;
+        width: 135px;*/
       }
 
       .feature-img {
@@ -471,16 +501,15 @@
       #closing-title {
         padding-top: 300px;
       }
-    }
 
-    @media (max-width: 320px) {
-      #screenshot-mobile {
-        display: block;
-        height: 320px;
-        margin: auto;
-        width: 320px;
+      @media (max-width: 369px) {
+        #screenshot-mobile {
+          display: block;
+          height: 320px;
+          margin: auto;
+          width: 320px;
+        }
       }
-    }
   </style>
 </head>
 
@@ -568,10 +597,13 @@
       </div>
     </div>
   </div>
-    <div id="logo-block" class="logo-block-mobile">
-      <img id="logo" src="/assets/icons/app-icon.png" />
-      <span id="app-name">Music Off</span>
-    </div>
+  <div id="logo-block">
+    <img id="logo" src="/assets/icons/app-icon.png" />
+    <span id="app-name">Music Off</span>
+  </div>
+  <div id="google-play-container">
+    <span id="google-play-bottom">GET THE APP</span>
+  </div>
 
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
   <script>
