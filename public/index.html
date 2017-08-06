@@ -634,6 +634,34 @@
   </script>
 
   <!-- Repeatedly animate wavelayer horizontally. -->
+  <script src="//cdn.jsdelivr.net/velocity/1.5/velocity.min.js"></script>
+  <script>
+    const windowWidth = $(window).width();
+    const wavelayer3Width = $("#wavelayer3").width();
+    const wavelayer2Width = $("#wavelayer2").width();
+    const wavelayer1Width = $("#wavelayer1").width();
+    const diff3 = wavelayer3Width - windowWidth;
+    const diff2 = wavelayer2Width - windowWidth;
+    const diff1 = wavelayer1Width - windowWidth;
+    $("#wavelayer3").velocity({
+      translateX: -diff3 + "px",
+    }, {
+      duration: 3000,
+      loop: true
+    });
+    $("#wavelayer2").velocity({
+      translateX: diff2 + "px",
+    }, {
+      duration: 3000,
+      loop: true
+    });
+    $("#wavelayer1").velocity({
+      translateX: -diff1 + "px",
+    }, {
+      duration: 3000,
+      loop: true
+    });
+  </script>
 
   <!-- Apply seeThru to screenshot. -->
   <script src="https://unpkg.com/seethru@3.0.1/dist/seeThru.min.js"></script>
