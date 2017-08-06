@@ -45,14 +45,9 @@
       top: 25px;
     }
 
-    #wavelayer3-test {
-      position: absolute;
-      left: 0;
-    }
-
-    /*#wavelayer3 {
+    #wavelayer3 {
       left: 0px;
-    }*/
+    }
 
     #wavelayer2 {
       right: 0px;
@@ -516,20 +511,16 @@
         }
       }
 
-      @media only screen
-      and (min-device-width : 375px)
-      and (max-device-width : 667px)
-      and (orientation : landscape) {
-
-      #row4 {
-        height: 375px;
-      }
+      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+        #row4 {
+          height: 375px;
+        }
       }
   </style>
 </head>
 
 <body>
-  <div id="wavelayer3-test"><img class="wavelayer" id="wavelayer3" src="/assets/images/wavelayer3.png" /></div>
+  <img class="wavelayer" id="wavelayer3" src="/assets/images/wavelayer3.png" />
   <img class="wavelayer" id="wavelayer2" src="/assets/images/wavelayer2.png" />
   <img class="wavelayer" id="wavelayer1" src="/assets/images/wavelayer1.png" />
   <div id="wavelayer-bottom"></div>
@@ -622,18 +613,7 @@
 
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 
-    <script type="text/javascript">
-    $(function()
-    {
-            $('#wavelayer3-test').animate(
-                    {
-                            "left" : "-900px"
-                    },
-                    5000, 'swing'
-            );
-    });
-
-    </script>
+  <!-- Handle wavelayer vertical position due to the window scrolling action. -->
   <script>
     function updateViews() {
       const windowHeight = $(window).height();
@@ -642,17 +622,6 @@
       const waveScrollTop = windowScrollTop / (contentsHeight - windowHeight) * windowHeight;
       $(".wavelayer").css("top", 25 + waveScrollTop);
       $("#wavelayer-bottom").css("top", 745 + waveScrollTop);
-      $(function()
-      {
-              $('#wavelayer3-test').animate(
-                      {
-                              "left" : "-900px"
-                      },
-                      5000, 'swing'
-              );
-      });
-
-
     }
     $('window').on({
       'touchmove': function(e) {
@@ -663,17 +632,14 @@
       updateViews();
     });
   </script>
+
+  <!-- Repeatedly animate wavelayer horizontally. -->
+
+  <!-- Apply seeThru to screenshot. -->
   <script src="https://unpkg.com/seethru@3.0.1/dist/seeThru.min.js"></script>
   <script>
     seeThru.create('#screenshot');
   </script>
-
-
-
-
-
-
-
 </body>
 
 </html>
