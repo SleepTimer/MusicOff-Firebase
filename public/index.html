@@ -655,19 +655,39 @@
       $("#wavelayer3").velocity({
         translateX: -diff3 + "px",
       }, {
-        duration: 3000,
+        duration: 10000,
         loop: true
       });
       $("#wavelayer2").velocity({
         translateX: diff2 + "px",
       }, {
-        duration: 3000,
+        duration: 10000,
         loop: true
       });
       $("#wavelayer1").velocity({
         translateX: -diff1 + "px",
       }, {
-        duration: 3000,
+        duration: 10000,
+        loop: true
+      });
+    }
+      if ($(window).width() > 800) {
+        $("#wavelayer3").velocity({
+          translateX: -diff3 + "px",
+        }, {
+          duration: 8000,
+          loop: true
+        });
+      $("#wavelayer2").velocity({
+        translateX: diff2 + "px",
+      }, {
+        duration: 8000,
+        loop: true
+      });
+      $("#wavelayer1").velocity({
+        translateX: -diff1 + "px",
+      }, {
+        duration: 8000,
         loop: true
       });
     }
@@ -675,31 +695,38 @@
 
   <!-- Fade out logoBlock -->
   <script>
-  $(function() {
-    $(window).scroll(function(){
-      var scrollTop = $(window).scrollTop();
-      if(scrollTop != 0 && $(window).width() < 800)
-        $('#logo-block').stop().animate({'opacity':'0.2'},400);
-      else
-        $('#logo-block').stop().animate({'opacity':'1'},400);
+    $(function() {
+      $(window).scroll(function() {
+        var scrollTop = $(window).scrollTop();
+        if (scrollTop != 0 && $(window).width() < 800)
+          $('#logo-block').stop().animate({
+            'opacity': '0.2'
+          }, 400);
+        else
+          $('#logo-block').stop().animate({
+            'opacity': '1'
+          }, 400);
+      });
+
+      $('#logo-block').hover(
+        function(e) {
+          var scrollTop = $(window).scrollTop();
+          if (scrollTop != 0) {
+            $('#logo-block').stop().animate({
+              'opacity': '1'
+            }, 400);
+          }
+        },
+        function(e) {
+          var scrollTop = $(window).scrollTop();
+          if (scrollTop != 0) {
+            $('#logo-block').stop().animate({
+              'opacity': '0.2'
+            }, 400);
+          }
+        }
+      );
     });
-
-    $('#logo-block').hover(
-      function (e) {
-        var scrollTop = $(window).scrollTop();
-        if(scrollTop != 0){
-          $('#logo-block').stop().animate({'opacity':'1'},400);
-        }
-      },
-      function (e) {
-        var scrollTop = $(window).scrollTop();
-        if(scrollTop != 0){
-          $('#logo-block').stop().animate({'opacity':'0.2'},400);
-        }
-      }
-    );
-  });
-
   </script>
 
   <!-- Apply seeThru to screenshot. -->
