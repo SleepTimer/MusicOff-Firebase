@@ -673,6 +673,23 @@
   </script>
 
 
+  <!-- Start over wavelayer animation when browser window is scrolled to bottom -->
+  <script>
+    $(window).on("scroll", function() {
+          if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            $('#wavelayer3').stop(true).css({
+              left: 0
+            });
+            $('#wavelayer2').stop(true).css({
+              right: 0
+            });
+            $('#wavelayer1').stop(true).css({
+              left: 0
+            });
+          });
+  </script>
+
+
   <!-- Repeatedly animate wavelayer horizontally. -->
   <script src="//cdn.jsdelivr.net/velocity/1.5/velocity.min.js"></script>
   <script>
@@ -726,6 +743,8 @@
   </script>
 
 
+
+
   <!-- Fade out logoBlock -->
   <script>
     if ($(window).width() < 800) {
@@ -737,6 +756,17 @@
         }
       })
     };
+  </script>
+
+  <!-- Fade in logoBlock -->
+  <script>
+    if ($(window).width() < 800) {
+      $(window).on("scroll", function() {
+          if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            $('#logo-block').css("opacity", 1);
+          }
+        })
+      };
   </script>
 
 
