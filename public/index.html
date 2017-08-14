@@ -671,13 +671,13 @@
         loop: true
       });
     }
-      if ($(window).width() > 800) {
-        $("#wavelayer3").velocity({
-          translateX: -diff3 + "px",
-        }, {
-          duration: 20000,
-          loop: true
-        });
+    if ($(window).width() > 800) {
+      $("#wavelayer3").velocity({
+        translateX: -diff3 + "px",
+      }, {
+        duration: 20000,
+        loop: true
+      });
       $("#wavelayer2").velocity({
         translateX: diff2 + "px",
       }, {
@@ -695,39 +695,18 @@
 
   <!-- Fade out logoBlock -->
   <script>
-    $(function() {
+    if ($(window).width() < 800)
       $(window).scroll(function() {
-        var scrollTop = $(window).scrollTop();
-        if (scrollTop != 0 && $(window).width() < 800)
-          $('#logo-block').stop().animate({
-            'opacity': '0.2'
-          }, 400);
-        else
-          $('#logo-block').stop().animate({
-            'opacity': '1'
-          }, 400);
-      });
-
-      $('#logo-block').hover(
-        function(e) {
-          var scrollTop = $(window).scrollTop();
-          if (scrollTop != 0) {
-            $('#logo-block').stop().animate({
-              'opacity': '1'
-            }, 400);
-          }
-        },
-        function(e) {
-          var scrollTop = $(window).scrollTop();
-          if (scrollTop != 0) {
-            $('#logo-block').stop().animate({
-              'opacity': '0.2'
-            }, 400);
-          }
+        if ($(this).scrollTop() > 20) {
+          $('#logo-block').css("opacity", 0.5);
         }
-      );
-    });
+        else {
+          $('#logo-block').css("opacity", 1);
+        }
+      });
   </script>
+
+
 
   <!-- Apply seeThru to screenshot. -->
   <script src="https://unpkg.com/seethru@3.0.1/dist/seeThru.min.js"></script>
