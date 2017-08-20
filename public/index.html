@@ -653,13 +653,9 @@
       $("#wavelayer-bottom").css("top", 745 + waveScrollTop);
     }
     $('window').on({
-      'touchmove': function(e) {
-        updateViews();
-      }
+      'touchmove': updateViews
     });
-    $(window).scroll(function() {
-      updateViews();
-    });
+    $(window).scroll(updateViews);
   </script>
 
 
