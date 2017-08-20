@@ -722,46 +722,25 @@
     const diff3 = wavelayer3Width - windowWidth;
     const diff2 = wavelayer2Width - windowWidth;
     const diff1 = wavelayer1Width - windowWidth;
-    if ($(window).width() < 800) {
-      $("#wavelayer3").velocity({
-        translateX: -diff3 + "px",
-      }, {
-        duration: 22000,
-        loop: true
-      });
-      $("#wavelayer2").velocity({
-        translateX: diff2 + "px",
-      }, {
-        duration: 22000,
-        loop: true
-      });
-      $("#wavelayer1").velocity({
-        translateX: -diff1 + "px",
-      }, {
-        duration: 25000,
-        loop: true
-      });
-    }
-    if ($(window).width() > 800) {
-      $("#wavelayer3").velocity({
-        translateX: -diff3 + "px",
-      }, {
-        duration: 20000,
-        loop: true
-      });
-      $("#wavelayer2").velocity({
-        translateX: diff2 + "px",
-      }, {
-        duration: 20000,
-        loop: true
-      });
-      $("#wavelayer1").velocity({
-        translateX: -diff1 + "px",
-      }, {
-        duration: 25000,
-        loop: true
-      });
-    }
+    const duration = $(window).width() < 800 ? 22000 : 20000;
+    $("#wavelayer3").velocity({
+      translateX: -diff3 + "px",
+    }, {
+      duration: duration,
+      loop: true
+    });
+    $("#wavelayer2").velocity({
+      translateX: diff2 + "px",
+    }, {
+      duration: duration,
+      loop: true
+    });
+    $("#wavelayer1").velocity({
+      translateX: -diff1 + "px",
+    }, {
+      duration: 25000,
+      loop: true
+    });
   </script>
 
 
