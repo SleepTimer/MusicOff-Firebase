@@ -31,7 +31,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/playstore-icon.png">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
   <style>
-      html {
+        html {
       -webkit-text-size-adjust: 100%;
     }
 
@@ -384,8 +384,24 @@
         transform: translate(-50%, -50%);
       }
 
-      #google-play-container {
+      /*#google-play-container {
         background-color: #FFB700;
+        bottom: 0px;
+        display: initial;
+        height: 48px;
+        position: fixed;
+        width: 100%;
+      }*/
+      /*#google-play-bottom {
+        display: block;
+        font: 16px/24px 'Roboto-Regular', sans-serif;
+        color: white;
+        text-align: center;
+        padding: 12px 0;
+      }*/
+      #google-play-container {
+        background-color: #131313;
+        border-top: 1px solid #252525;
         bottom: 0px;
         display: initial;
         height: 48px;
@@ -396,126 +412,126 @@
       #google-play-bottom {
         display: block;
         font: 16px/24px 'Roboto-Regular', sans-serif;
-        color: white;
+        color: #FFB700;
         text-align: center;
         padding: 12px 0;
       }
-    }
 
-    @media (max-width: 600px) {
-      .col {
-        width: 100%;
-      }
 
-      .row {
-        flex-direction: column;
-      }
+      @media (max-width: 600px) {
+        .col {
+          width: 100%;
+        }
 
-      #row1 {
-        height: 750px;
-      }
+        .row {
+          flex-direction: column;
+        }
 
-      #row2 {
-        height: 1100px;
-      }
+        #row1 {
+          height: 750px;
+        }
 
-      #row3 {
-        display: none;
-      }
+        #row2 {
+          height: 1100px;
+        }
 
-      #row4 {
-        height: 700px;
-      }
+        #row3 {
+          display: none;
+        }
 
-      .col-left {
-        float: initial;
-      }
+        #row4 {
+          height: 700px;
+        }
 
-      .col-right {
-        float: initial;
-      }
+        .col-left {
+          float: initial;
+        }
 
-      #row1-col-left {
-        margin-right: 0px;
-        padding-top: 48px;
-      }
+        .col-right {
+          float: initial;
+        }
 
-      #row1-col-right {
-        padding-top: 0px;
-        padding-left: 0px;
-      }
+        #row1-col-left {
+          margin-right: 0px;
+          padding-top: 48px;
+        }
 
-      .row2-col-desktop {
-        display: none;
-      }
+        #row1-col-right {
+          padding-top: 0px;
+          padding-left: 0px;
+        }
 
-      .row2-col-mobile {
-        display: block;
-        margin: 50px 40px 0 40px;
-        width: auto;
-      }
+        .row2-col-desktop {
+          display: none;
+        }
 
-      .seeThru-display {
-        display: none;
-      }
+        .row2-col-mobile {
+          display: block;
+          margin: 50px 40px 0 40px;
+          width: auto;
+        }
 
-      #catch-phrase {
-        margin: 0 40px;
-        text-align: center;
-      }
+        .seeThru-display {
+          display: none;
+        }
 
-      #description {
-        margin: 0 40px 20px 40px;
-        text-align: center;
-        max-width: initial;
-      }
+        #catch-phrase {
+          margin: 0 40px;
+          text-align: center;
+        }
 
-      #google-play {
-        display: none;
-        /*height: 40px;
+        #description {
+          margin: 0 40px 20px 40px;
+          text-align: center;
+          max-width: initial;
+        }
+
+        #google-play {
+          display: none;
+          /*height: 40px;
         margin: auto;
         width: 135px;*/
-      }
+        }
 
-      .feature-img {
-        display: block;
-        height: 48px;
-        margin: auto;
-        width: 72px;
-      }
-
-      .feature-title {
-        margin-top: 10px;
-        margin-bottom: 5px;
-        text-align: center;
-        width: auto;
-      }
-
-      .feature-description {
-        margin-top: 0px;
-        margin-bottom: 60px;
-        text-align: center;
-        width: auto;
-      }
-
-      #closing-title {
-        padding-top: 300px;
-      }
-
-      @media (max-width: 369px) {
-        #screenshot-mobile {
+        .feature-img {
           display: block;
-          height: 320px;
+          height: 48px;
           margin: auto;
-          width: 320px;
+          width: 72px;
         }
-      }
 
-      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
-        #row4 {
-          height: 375px;
+        .feature-title {
+          margin-top: 10px;
+          margin-bottom: 5px;
+          text-align: center;
+          width: auto;
         }
-      }
+
+        .feature-description {
+          margin-top: 0px;
+          margin-bottom: 60px;
+          text-align: center;
+          width: auto;
+        }
+
+        #closing-title {
+          padding-top: 300px;
+        }
+
+        @media (max-width: 369px) {
+          #screenshot-mobile {
+            display: block;
+            height: 320px;
+            margin: auto;
+            width: 320px;
+          }
+        }
+
+        @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+          #row4 {
+            height: 375px;
+          }
+        }
   </style>
 </head>
 
@@ -621,6 +637,7 @@
 
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 
+
   <!-- Handle wavelayer vertical position due to the window scrolling action. -->
   <script>
     function updateViews() {
@@ -640,6 +657,7 @@
       updateViews();
     });
   </script>
+
 
   <!-- Start over wavelayer animation when width changes -->
   <script>
@@ -743,30 +761,17 @@
   </script>
 
 
-
-
   <!-- Fade out logoBlock -->
   <script>
     if ($(window).width() < 800) {
       $(window).scroll(function() {
-        if ($(this).scrollTop() > 20) {
+        if ($(this).scrollTop() > 20 && (window.innerHeight + window.scrollY) < document.body.offsetHeight) {
           $('#logo-block').css("opacity", 0.5);
         } else {
           $('#logo-block').css("opacity", 1);
         }
       })
     };
-  </script>
-
-  <!-- Fade in logoBlock -->
-  <script>
-    if ($(window).width() < 800) {
-      $(window).on("scroll", function() {
-          if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-            $('#logo-block').css("opacity", 1);
-          }
-        })
-      };
   </script>
 
 
